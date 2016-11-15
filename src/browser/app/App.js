@@ -1,5 +1,5 @@
 /* @flow */
-import './App.scss';
+import './App.css';
 import * as themes from './themes';
 import Footer from './Footer';
 import Header from './Header';
@@ -77,9 +77,11 @@ App.propTypes = {
   currentTheme: React.PropTypes.string,
 };
 
-App = connect(state => ({
-  currentLocale: state.intl.currentLocale,
-  currentTheme: state.themes.currentTheme,
-}))(App);
+App = connect(
+  state => ({
+    currentLocale: state.intl.currentLocale,
+    currentTheme: state.themes.currentTheme,
+  }),
+)(App);
 
 export default start(App);

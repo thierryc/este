@@ -15,7 +15,7 @@ const SwitchLocale = ({ currentLocale, locales, setCurrentLocale }) => (
         theme={locale === currentLocale ? 'primary' : 'secondary'}
       >
         {locale}
-      </Button>
+      </Button>,
     )}
   </View>
 );
@@ -26,7 +26,10 @@ SwitchLocale.propTypes = {
   setCurrentLocale: React.PropTypes.func.isRequired,
 };
 
-export default connect(state => ({
-  currentLocale: state.intl.currentLocale,
-  locales: state.intl.locales,
-}), { setCurrentLocale })(SwitchLocale);
+export default connect(
+  state => ({
+    currentLocale: state.intl.currentLocale,
+    locales: state.intl.locales,
+  }),
+  { setCurrentLocale },
+)(SwitchLocale);

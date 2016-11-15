@@ -29,8 +29,8 @@ const styles = StyleSheet.create({
 });
 
 type State = {
-  forgetPasswordIsShown: boolean,
-  recoveryEmailSent: boolean,
+  forgetPasswordIsShown: bool,
+  recoveryEmailSent: bool,
 };
 
 class Email extends React.Component {
@@ -167,7 +167,10 @@ Email = fields(Email, {
   fields: ['email', 'password'],
 });
 
-export default connect(state => ({
-  disabled: state.auth.formDisabled,
-  error: state.auth.error,
-}), { resetPassword, signIn, signUp })(Email);
+export default connect(
+  state => ({
+    disabled: state.auth.formDisabled,
+    error: state.auth.error,
+  }),
+  { resetPassword, signIn, signUp },
+)(Email);

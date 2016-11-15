@@ -22,7 +22,7 @@ const SwitchTheme = ({ currentTheme, setTheme }) => (
         theme={themeKey === currentTheme ? 'primary' : 'secondary'}
       >
         {themeKey} theme
-      </Button>
+      </Button>,
     )}
   </View>
 );
@@ -32,6 +32,9 @@ SwitchTheme.propTypes = {
   setTheme: React.PropTypes.func.isRequired,
 };
 
-export default connect(state => ({
-  currentTheme: state.themes.currentTheme || 'initial',
-}), { setTheme })(SwitchTheme);
+export default connect(
+  state => ({
+    currentTheme: state.themes.currentTheme || 'initial',
+  }),
+  { setTheme },
+)(SwitchTheme);

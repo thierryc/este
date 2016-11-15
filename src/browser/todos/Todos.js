@@ -32,7 +32,7 @@ const Todos = ({ deleteTodo, todos, toggleTodoCompleted }) => {
             todo={todo}
             toggleTodoCompleted={toggleTodoCompleted}
           />
-        </Block>
+        </Block>,
       )}
     </View>
   );
@@ -44,6 +44,9 @@ Todos.propTypes = {
   toggleTodoCompleted: React.PropTypes.func.isRequired,
 };
 
-export default connect(state => ({
-  todos: state.todos.all,
-}), { deleteTodo, toggleTodoCompleted })(Todos);
+export default connect(
+  state => ({
+    todos: state.todos.all,
+  }),
+  { deleteTodo, toggleTodoCompleted },
+)(Todos);

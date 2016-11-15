@@ -51,7 +51,7 @@ const Todos = ({ todos, toggleTodoCompleted }) => {
       {sortedTodos.map(todo =>
         <View key={todo.id} style={styles.row}>
           <Todo todo={todo} toggleTodoCompleted={toggleTodoCompleted} />
-        </View>
+        </View>,
       )}
       <Buttons />
     </ScrollView>
@@ -63,6 +63,9 @@ Todos.propTypes = {
   toggleTodoCompleted: React.PropTypes.func.isRequired,
 };
 
-export default connect(state => ({
-  todos: state.todos.all,
-}), { toggleTodoCompleted })(Todos);
+export default connect(
+  state => ({
+    todos: state.todos.all,
+  }),
+  { toggleTodoCompleted },
+)(Todos);
