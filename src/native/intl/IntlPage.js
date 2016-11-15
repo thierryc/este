@@ -34,7 +34,7 @@ const IntlPage = ({ currentLocale, locales, setCurrentLocale }) => {
             style={[styles.text, locale === currentLocale && styles.selected]}
             key={locale}
             onPress={() => setCurrentLocale(locale)}
-          >{locale}</Text>
+          >{locale}</Text>,
         )}
         <FormattedDate
           day="numeric"
@@ -59,7 +59,10 @@ IntlPage.propTypes = {
   setCurrentLocale: React.PropTypes.func.isRequired,
 };
 
-export default connect(state => ({
-  currentLocale: state.intl.currentLocale,
-  locales: state.intl.locales,
-}), { setCurrentLocale })(IntlPage);
+export default connect(
+  state => ({
+    currentLocale: state.intl.currentLocale,
+    locales: state.intl.locales,
+  }),
+  { setCurrentLocale },
+)(IntlPage);

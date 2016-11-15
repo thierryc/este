@@ -50,7 +50,7 @@ let OnlineUsers = ({ users }) => (
       <Text>No one is online.</Text>
     :
       users.map(user =>
-        <User key={user.id} user={user} />
+        <User key={user.id} user={user} />,
       )
     }
   </View>
@@ -67,6 +67,9 @@ OnlineUsers = firebase((database, props) => {
   ];
 })(OnlineUsers);
 
-export default connect(state => ({
-  users: state.users.online,
-}), { onUsersPresence })(OnlineUsers);
+export default connect(
+  state => ({
+    users: state.users.online,
+  }),
+  { onUsersPresence },
+)(OnlineUsers);

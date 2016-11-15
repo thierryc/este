@@ -45,7 +45,7 @@ const keyConceptsOfLibertarianism = [
 }));
 
 type State = {
-  disabled: boolean,
+  disabled: bool,
   error: ?Object,
   submittedValues: ?Object,
 };
@@ -124,7 +124,7 @@ class FieldsPage extends React.Component {
                     item={item}
                     path={['fieldsPage', 'dynamic', item.id]}
                   />
-                </Box>
+                </Box>,
               )}
             </Flex>
           </Block>
@@ -220,6 +220,8 @@ FieldsPage = fields(FieldsPage, {
   }),
 });
 
-export default connect(state => ({
-  dynamicFields: R.path(['fieldsPage', 'dynamic'], state.fields),
-}))(FieldsPage);
+export default connect(
+  state => ({
+    dynamicFields: R.path(['fieldsPage', 'dynamic'], state.fields),
+  }),
+)(FieldsPage);
