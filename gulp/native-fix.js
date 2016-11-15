@@ -4,6 +4,7 @@ import gulp from 'gulp';
 
 // github.com/facebook/react-native/issues/4062#issuecomment-164598155
 // This is a very long-term issue. Nobody can fix the whole NPM.
+
 const fixBabel5RcFiles = () =>
   del(['node_modules/**/.babelrc', '!node_modules/react-native/**']);
 
@@ -11,6 +12,7 @@ const fixBabel5RcFiles = () =>
 // There is a chance react-intl team will fix it, but we can't wait.
 // TODO: Remove once github.com/yahoo/react-intl/issues/620#issuecomment-247600683
 // will be released.
+
 const fixReactIntlLibraries = () => {
   [
     ['react-intl', './locale-data/index.js'],

@@ -7,6 +7,7 @@ import path from 'path';
 import runSequence from 'run-sequence';
 import { spawn } from 'child_process';
 
+// TODO[thy]: get from react-router
 const urls = {
   '/': 'index.html',
   '/404': '404.html',

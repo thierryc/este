@@ -20,7 +20,9 @@ gulp.task('messages-check', ['messages-extract'], () => {
       const localeMessagesKeys = Object.keys(messages[locale]);
       const missingMessagesKeys = diff(defaultMessagesKeys, localeMessagesKeys);
       const unusedMessagesKeys = diff(localeMessagesKeys, defaultMessagesKeys);
+
       if (!missingMessagesKeys.length && !unusedMessagesKeys.length) return;
+
       console.log(locale); // eslint-disable-line no-console
       log('missing messages', missingMessagesKeys);
       log('unused messages', unusedMessagesKeys);

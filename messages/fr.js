@@ -46,11 +46,11 @@ export default [
   },
   {
     "id": "app.confirm.areYouSure",
-    "defaultMessage": "Etes-vous sûr ?",
+    "defaultMessage": "Êtes-vous sûr ?",
   },
   {
     "id": "app.confirm.unsavedChanges",
-    "defaultMessage": "Vous avez effectué des modifications. Etes-vous sûr ?",
+    "defaultMessage": "Vous avez effectué des modifications. Êtes-vous sûr ?",
   },
   {
     "id": "app.FieldError.required",
@@ -146,7 +146,7 @@ export default [
   },
   {
     "id": "firebase.error.EMAIL_TAKEN",
-    "defaultMessage": "Le nouveau compte utilisateur ne peut pas être créé car l'email indiqué est déjà utilisé.",
+    "defaultMessage": "Le nouveau compte utilisateur ne peut pas être créé, car l'email indiqué est déjà utilisé.",
   },
   {
     "id": "firebase.error.INVALID_EMAIL",
@@ -174,7 +174,7 @@ export default [
   },
   {
     "id": "loading.longLoadingText",
-    "defaultMessage": "Chargement toujours, s'il vous plaît vérifier votre connexion",
+    "defaultMessage": "Chargement toujours, s'il vous plaît, vérifier votre connexion",
   },
   {
     "id": "notFound.continue",
