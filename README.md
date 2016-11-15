@@ -1,8 +1,3 @@
-<img
-  alt="Este.js"
-  src="https://cloud.githubusercontent.com/assets/66249/6515278/de638916-c388-11e4-8754-184f5b11e770.jpeg"
-  width="200"
-/>
 
 [![Circle CI](https://img.shields.io/circleci/project/este/este/master.svg)](https://circleci.com/gh/este/este)
 [![Join the chat at https://gitter.im/este/este](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/este/este)
@@ -121,6 +116,10 @@ React Native: [Getting Started](https://facebook.github.io/react-native/docs/get
 
 - Recommended editor is [Atom](https://atom.io). Check [settings](https://github.com/este/este/wiki/Recommended-Atom.io-Settings).
 - Install [nuclide.io](https://nuclide.io/), enable "Use the Flow binary included in each project".
+
+## NEXT ? 
+
+https://medium.com/@jbscript/using-bootstrap-4-from-source-with-react-and-nwb-f26caf395952#.5qqqop5ck
 
 ## Credit
 
