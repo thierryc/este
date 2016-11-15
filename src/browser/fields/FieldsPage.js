@@ -28,17 +28,20 @@ import {
 } from '../app/components';
 
 // The example of dynamically loaded editable data.
-// cato.org/publications/commentary/key-concepts-libertarianism
-const keyConceptsOfLibertarianism = [
-  'Individualism',
-  'Individual Rights',
-  'Spontaneous Order',
-  'The Rule of Law',
-  'Limited Government',
-  'Free Markets',
-  'The Virtue of Production',
-  'Natural Harmony of Interests',
-  'Peace',
+const dynamicColorsList = [
+  'gray',
+  'red',
+  'pink',
+  'grape',
+  'violet',
+  'indigo',
+  'blue',
+  'cyan',
+  'teal',
+  'green',
+  'lime',
+  'yellow',
+  'orange',
 ].map((concept, index) => ({
   id: index,
   name: concept,
@@ -114,32 +117,34 @@ class FieldsPage extends React.Component {
             type="text"
           />
           <FieldError error={error} prop="name" />
-          <Heading alt>Key Concepts of Libertarianism</Heading>
+          <Heading alt>Dynamic Colors List</Heading>
           <Block>
+
             <Flex wrap>
-              {keyConceptsOfLibertarianism.map(item =>
+              {dynamicColorsList.map(item =>
                 <Box mr={1} key={item.id}>
                   <DynamicField
                     disabled={disabled}
                     item={item}
                     path={['fieldsPage', 'dynamic', item.id]}
                   />
-                </Box>,
+                </Box>
               )}
+
             </Flex>
           </Block>
           <Block>
             <Checkbox
-              {...fields.isLibertarian}
-              checked={fields.isLibertarian.value}
+              {...fields.isMartian}
+              checked={fields.isMartian.value}
               disabled={disabled}
-              label="I'm libertarian"
+              label="I'm Martian"
             />
             <Checkbox
-              {...fields.isAnarchist}
-              checked={fields.isAnarchist.value}
+              {...fields.isVenusian}
+              checked={fields.isVenusian.value}
               disabled={disabled}
-              label="I'm anarchist"
+              label="I'm Venusian"
             />
           </Block>
           <Block>
@@ -208,15 +213,15 @@ FieldsPage = fields(FieldsPage, {
   fields: [
     'donation',
     'gender',
-    'isAnarchist',
-    'isLibertarian',
+    'isVenusian',
+    'isMartian',
     'name',
   ],
   getInitialState: () => ({
     donation: '2',
     gender: 'male',
-    isAnarchist: false,
-    isLibertarian: false,
+    isVenusian: false,
+    isMartian: false,
   }),
 });
 

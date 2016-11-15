@@ -4,13 +4,13 @@ import { execSync } from 'child_process';
 
 // Version getter.
 const getVersion = () => {
-   var version;
-   try {
-     version = process.env.SOURCE_VERSION || process.env.SHA || execSync('git rev-parse HEAD').toString().trim();;
-   } catch (e) {
-     version = 'unknown';
-   }
-   return version;
+  let version;
+  try {
+    version = process.env.SOURCE_VERSION || process.env.SHA || execSync('git rev-parse HEAD').toString().trim();
+  } catch (e) {
+    version = 'unknown';
+  }
+  return version;
 };
 
 const VERSION = getVersion();
