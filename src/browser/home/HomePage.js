@@ -12,18 +12,24 @@ import {
 
 const HomePage = () => (
   <View>
-    <Title message="Este.js" />
+    <Title message="React universal app" />
     <PageHeader
       description="Starter kit for universal full–fledged React apps. One stack
         for browser, mobile, server."
-      heading="Este"
+      heading="React Universal App"
     />
+
     {/* This is a block with margin-bottom: scale[4]. Inline styles rocks. */}
     <Block mb={4}>
-      <Link to="https://github.com/este/este">
-        github.com/este/este
-      </Link>
+      <p><Link to="https://github.com/thierryc/react-universal-apps">
+        github.com/thierryc/react-universal-apps
+      </Link></p>
+
+      <p><Link to="https://github.com/este/este">
+        Este Fork from github.com/este/este
+      </Link></p>
     </Block>
+
     <SwitchTheme />
     <Image
       alt="50x50 placeholder"

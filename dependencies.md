@@ -94,7 +94,6 @@
 ## require-dir
 
 
-
 ## rxjs
 
 ## serialize-javascript
@@ -131,3 +130,9 @@ https://github.com/yargs/yargs
 ## postcss-loader
 
 https://github.com/rvagg/through2
+
+
+
+# Interesting react projects
+
+http://jedwatson.github.io/react-select/

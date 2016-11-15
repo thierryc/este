@@ -33,8 +33,8 @@ const store = configureStore({
   platformDeps: { FBSDK, uuid, storageEngine: AsyncStorage },
 });
 
-const Este = () => (
+const MyApp = () => (
   <Root store={store} />
 );
 
-AppRegistry.registerComponent('Este', () => Este);
+AppRegistry.registerComponent('MyApp', () => MyApp);

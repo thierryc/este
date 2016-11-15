@@ -3,7 +3,7 @@ import gulp from 'gulp';
 
 gulp.task('native-upgrade', () => {
   console.log(`
-    Steps to upgrade React Native in Este
+    Steps to upgrade React Native in your app
 
     - Update package.json
       - react-native, use fixed version
@@ -14,7 +14,7 @@ gulp.task('native-upgrade', () => {
 
     From Scratch
       - run 'react-native init YourAppName' in some temp dir
-      - delete 'android' and 'ios' directories in your Este app
+      - delete 'android' and 'ios' directories in your app
       - copy 'android' and 'ios' directories from some temp dir
       - run 'npm install'
       - run 'react-native link'

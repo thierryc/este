@@ -75,7 +75,7 @@ const validateEmailAndPassword = (validate, fields) => validate(fields)
     .simplePassword()
   .promise;
 
-const mapFirebaseErrorToEsteValidationError = (code) => {
+const mapFirebaseErrorToValidationError = (code) => {
   const prop = {
     'auth/email-already-in-use': 'email',
     'auth/invalid-email': 'email',
@@ -114,7 +114,7 @@ const signInEpic = (action$, { FBSDK, firebaseAuth, validate }) => {
       .map(firebaseUser => signInDone(firebaseUser))
       .catch((error) => {
         if (messages[error.code]) {
-          error = mapFirebaseErrorToEsteValidationError(error.code);
+          error = mapFirebaseErrorToValidationError(error.code);
         }
         return Observable.of(signInFail(error));
       });
@@ -185,7 +185,7 @@ const signUpEpic = (action$, { firebaseAuth, validate }) =>
         .map(firebaseUser => signUpDone(firebaseUser))
         .catch((error) => {
           if (messages[error.code]) {
-            error = mapFirebaseErrorToEsteValidationError(error.code);
+            error = mapFirebaseErrorToValidationError(error.code);
           }
           return Observable.of(signUpFail(error));
         });
