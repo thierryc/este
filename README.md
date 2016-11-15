@@ -104,6 +104,7 @@ React Native: [Getting Started](https://facebook.github.io/react-native/docs/get
 - `gulp deploy-heroku` deploy [Heroku](https://www.heroku.com/) app
 - `gulp deploy-firebase` deploy [Firebase](https://firebase.google.com/) app
 - `gulp deploy-firebase-database` deploy Firebase database only
+- `gulp deploy-appengine` deploy [Google Appengine](https://cloud.google.com/appengine/) app
 
 ## Customize Este App
 
