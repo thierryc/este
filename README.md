@@ -1,14 +1,10 @@
+This repo is a fork from the very good project : [este/este](https://github.com/este/este)
 
-[![Circle CI](https://img.shields.io/circleci/project/este/este/master.svg)](https://circleci.com/gh/este/este)
-[![Join the chat at https://gitter.im/este/este](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/este/este)
-[![Dependency Status](https://david-dm.org/este/este.svg)](https://david-dm.org/este/este)
-[![GitHub license](https://img.shields.io/github/license/este/este.svg)](https://github.com/este/este/blob/master/LICENSE)
+
 
 > Starter kit for universal full–fledged React apps. One stack for browser, mobile, server.
 
 > You don't have to start with everything. Este is perfect even for plain static pages. You can gracefully add any platform later. Este mission is simple: **Help startups to deliver minimal valuable product asap with the state of the art real-time universal app stack**.
-
-> Pokud máte zájem o školení JavaScript, React.js, nebo Este.js, podívejte se na [javascript-skoleni.cz](https://javascript-skoleni.cz/).
 
 ## Techniques
 
