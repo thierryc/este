@@ -1,4 +1,5 @@
 /* @flow */
+import type { State } from '../../common/types';
 import React from 'react';
 import buttonsMessages from '../../common/app/buttonsMessages';
 import emailMessages from '../../common/auth/emailMessages';
@@ -18,9 +19,9 @@ import {
   focus,
 } from '../app/components';
 
-type State = {
-  forgetPasswordIsShown: bool,
-  recoveryEmailSent: bool,
+type LocalState = {
+  forgetPasswordIsShown: boolean,
+  recoveryEmailSent: boolean,
 };
 
 class Email extends React.Component {
@@ -34,7 +35,7 @@ class Email extends React.Component {
     signUp: React.PropTypes.func.isRequired,
   };
 
-  state: State = {
+  state: LocalState = {
     forgetPasswordIsShown: false,
     recoveryEmailSent: false,
   };
@@ -155,13 +156,14 @@ Email = focus(Email, 'error');
 
 Email = injectIntl(Email);
 
-Email = fields(Email, {
+Email = fields({
   path: ['auth', 'email'],
+  // fok: 123,
   fields: ['email', 'password'],
-});
+})(Email);
 
 export default connect(
-  state => ({
+  (state: State) => ({
     disabled: state.auth.formDisabled,
     error: state.auth.error,
   }),

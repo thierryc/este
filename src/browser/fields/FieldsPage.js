@@ -1,4 +1,5 @@
 /* @flow */
+import type { State } from '../../common/types';
 import DynamicField from './DynamicField';
 import R from 'ramda';
 import React from 'react';
@@ -47,8 +48,8 @@ const dynamicColorsList = [
   name: concept,
 }));
 
-type State = {
-  disabled: bool,
+type LocalState = {
+  disabled: boolean,
   error: ?Object,
   submittedValues: ?Object,
 };
@@ -60,7 +61,7 @@ class FieldsPage extends React.Component {
     dynamicFields: React.PropTypes.object,
   };
 
-  state: State = {
+  state: LocalState = {
     disabled: false,
     error: null,
     submittedValues: null,
@@ -208,7 +209,7 @@ class FieldsPage extends React.Component {
 
 }
 
-FieldsPage = fields(FieldsPage, {
+FieldsPage = fields({
   path: 'fieldsPage',
   fields: [
     'donation',
@@ -223,10 +224,10 @@ FieldsPage = fields(FieldsPage, {
     isVenusian: false,
     isMartian: false,
   }),
-});
+})(FieldsPage);
 
 export default connect(
-  state => ({
+  (state: State) => ({
     dynamicFields: R.path(['fieldsPage', 'dynamic'], state.fields),
   }),
 )(FieldsPage);

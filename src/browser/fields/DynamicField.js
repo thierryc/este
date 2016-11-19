@@ -4,7 +4,7 @@ import { Input, View } from '../app/components';
 import { fields } from '../../common/lib/redux-fields';
 
 type Props = {
-  disabled?: bool,
+  disabled?: boolean,
   fields: Object,
   item: Object,
 };
@@ -23,8 +23,8 @@ const DynamicField = ({ disabled, fields, item }: Props) => (
   </View>
 );
 
-export default fields(DynamicField, {
+export default fields({
   path: props => props.path,
   fields: ['name'],
   getInitialState: props => props.item,
-});
+})(DynamicField);
