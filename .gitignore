@@ -40,11 +40,12 @@ buck-out/
 android/app/libs
 android/keystores/debug.keystore
 
-# Este
+# Project
 .firebaserc
 bundle-stats.json
 firebase-debug.log
 firebase/rules.json
 src/common/config.json
+src/server/config.js
 src/native/initialState.js
 webpack-assets.json
